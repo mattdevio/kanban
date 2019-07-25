@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/mattdevio/kanban/issues"
   },
-  "homepage": "https://github.com/mattdevio/kanban#readme"
+  "homepage": "https://github.com/mattdevio/kanban#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.37.0"
+  }
 }
