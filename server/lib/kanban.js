@@ -2,7 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const config = require('../util/config');
+const http = require('http');
 
+/**
+ * *kanban
+ * 
+ * @description Initializes the kanban express app instance
+ * @returns object
+ */
 const kanban = () => {
 
   const app = express();
