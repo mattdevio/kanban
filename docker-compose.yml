@@ -1,0 +1,24 @@
+version: "3.2"
+
+services:
+  app:
+    container_name: app
+    image: node:10-stretch-slim
+    working_dir: /opt/kanban
+    volumes:
+      - .:/opt/kanban
+    command: npm install && npm start
+    expose:
+      - "${PORT}"
+
+  nginx:
+    container_name: nginx
+    image: nginx:1.17.2-alpine
+    environment:
+      - HOSTNAME="${HOSTNAME}"
+      - APP_NAME=app
+      - APP_PORT="${PORT}"
+    # volumes:
+    #   - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+    #   - ./docker/nginx/run_nginx.sh:/usr/bin/run_nginx.sh
+    # command: run_nginx.sh
