@@ -19,3 +19,5 @@ const kanban = () => {
   return expressServer;
 
 };
+
+module.exports = kanban;
