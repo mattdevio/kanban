@@ -15,9 +15,10 @@ if (result.error) {
   throw result.error;
 }
 
-const config = Object.assign({}, result.parsed, {
+const config = {
+  env: Object.assign({}, result.parsed),
   isDevelopment: () => result.parsed.NODE_ENV === 'development',
   isProduction: () => result.parsed.NODE_ENV === 'production',
-});
+};
 
 module.exports = config;
